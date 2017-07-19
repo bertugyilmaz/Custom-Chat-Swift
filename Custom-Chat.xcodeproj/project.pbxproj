@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01F9B12D1F1F67B10028B568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9B12C1F1F67B10028B568 /* AppDelegate.swift */; };
-		01F9B12F1F1F67B10028B568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9B12E1F1F67B10028B568 /* ViewController.swift */; };
 		01F9B1321F1F67B10028B568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F9B1301F1F67B10028B568 /* Main.storyboard */; };
 		01F9B1341F1F67B10028B568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9B1331F1F67B10028B568 /* Assets.xcassets */; };
 		01F9B1371F1F67B10028B568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F9B1351F1F67B10028B568 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		01F9B1291F1F67B10028B568 /* Custom-Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom-Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9B12C1F1F67B10028B568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01F9B12E1F1F67B10028B568 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01F9B1311F1F67B10028B568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01F9B1331F1F67B10028B568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F9B1361F1F67B10028B568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				01F9B12C1F1F67B10028B568 /* AppDelegate.swift */,
-				01F9B12E1F1F67B10028B568 /* ViewController.swift */,
 				01F9B1301F1F67B10028B568 /* Main.storyboard */,
 				01F9B1331F1F67B10028B568 /* Assets.xcassets */,
 				01F9B1351F1F67B10028B568 /* LaunchScreen.storyboard */,
@@ -96,6 +93,7 @@
 				TargetAttributes = {
 					01F9B1281F1F67B10028B568 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 37V52RJ6S5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +134,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F9B12F1F1F67B10028B568 /* ViewController.swift in Sources */,
 				01F9B12D1F1F67B10028B568 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,9 +257,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 37V52RJ6S5;
 				INFOPLIST_FILE = "Custom-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chat";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,9 +270,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 37V52RJ6S5;
 				INFOPLIST_FILE = "Custom-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chat";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -299,6 +298,7 @@
 				01F9B13D1F1F67B10028B568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
