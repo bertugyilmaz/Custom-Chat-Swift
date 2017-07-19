@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0190ABEC1F1F6AE500185275 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABEB1F1F6AE500185275 /* MessagesTableViewController.swift */; };
+		0190ABEE1F1F6F6100185275 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */; };
 		01F9B12D1F1F67B10028B568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9B12C1F1F67B10028B568 /* AppDelegate.swift */; };
 		01F9B1321F1F67B10028B568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F9B1301F1F67B10028B568 /* Main.storyboard */; };
 		01F9B1341F1F67B10028B568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9B1331F1F67B10028B568 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		0190ABEB1F1F6AE500185275 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
+		0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		01F9B1291F1F67B10028B568 /* Custom-Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom-Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9B12C1F1F67B10028B568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01F9B1311F1F67B10028B568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 				01F9B1301F1F67B10028B568 /* Main.storyboard */,
 				01F9B1331F1F67B10028B568 /* Assets.xcassets */,
 				01F9B1351F1F67B10028B568 /* LaunchScreen.storyboard */,
+				0190ABEF1F1F6F6F00185275 /* Cell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -67,6 +70,14 @@
 				01F9B12C1F1F67B10028B568 /* AppDelegate.swift */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		0190ABEF1F1F6F6F00185275 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		01F9B1201F1F67B10028B568 = {
@@ -171,6 +182,7 @@
 			files = (
 				01F9B12D1F1F67B10028B568 /* AppDelegate.swift in Sources */,
 				0190ABEC1F1F6AE500185275 /* MessagesTableViewController.swift in Sources */,
+				0190ABEE1F1F6F6100185275 /* MessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
