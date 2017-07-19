@@ -92,6 +92,76 @@
             </objects>
             <point key="canvasLocation" x="553" y="-235"/>
         </scene>
+        <!--Name-->
+        <scene sceneID="SmO-zV-ceX">
+            <objects>
+                <viewController storyboardIdentifier="messageDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c4A-8H-Od2" customClass="ChatViewController" customModule="Custom_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G3T-NN-byT"/>
+                        <viewControllerLayoutGuide type="bottom" id="alm-q2-brn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4rK-BN-I0o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-nn-Eeu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="fi9-iv-fsB">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fi9-iv-fsB" id="tF4-TV-OpD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeL-va-IqF">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="x03-vD-rlw"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" id="OxP-dd-y6h">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="C0f-ix-yy9">
+                                            <rect key="frame" x="16" y="7" width="303" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem title="Send" id="xi2-Mg-5VC">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YLb-nn-Eeu" secondAttribute="trailing" id="8UB-Qi-rqr"/>
+                            <constraint firstItem="IeL-va-IqF" firstAttribute="top" secondItem="YLb-nn-Eeu" secondAttribute="bottom" id="9BZ-bP-Lkk"/>
+                            <constraint firstAttribute="trailing" secondItem="IeL-va-IqF" secondAttribute="trailing" id="Ksr-3O-SMK"/>
+                            <constraint firstItem="alm-q2-brn" firstAttribute="top" secondItem="IeL-va-IqF" secondAttribute="bottom" id="Ub7-2Z-dJ3"/>
+                            <constraint firstItem="YLb-nn-Eeu" firstAttribute="leading" secondItem="4rK-BN-I0o" secondAttribute="leading" id="lUL-UF-8iK"/>
+                            <constraint firstItem="YLb-nn-Eeu" firstAttribute="top" secondItem="G3T-NN-byT" secondAttribute="bottom" id="lqQ-Mm-UIG"/>
+                            <constraint firstItem="IeL-va-IqF" firstAttribute="leading" secondItem="4rK-BN-I0o" secondAttribute="leading" id="wbM-ge-gmk"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Name" id="neh-ys-uhy"/>
+                    <connections>
+                        <outlet property="tableView" destination="YLb-nn-Eeu" id="laA-qv-CjL"/>
+                        <outlet property="textToolbar" destination="IeL-va-IqF" id="6UJ-mZ-Etk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YpO-0l-J0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-235.23238380809596"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="b8c-mU-mUf">
             <objects>

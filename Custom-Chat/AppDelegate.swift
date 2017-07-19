@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.setNavigationBarSettings()
         return true
     }
 
@@ -30,6 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+    }
+    
+    func setNavigationBarSettings(){
+        UINavigationBar.appearance().tintColor = UIColor.black
+        UINavigationController().navigationBar.isTranslucent = false
     }
 }
 
