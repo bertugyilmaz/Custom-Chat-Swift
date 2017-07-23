@@ -12,6 +12,7 @@ class ChatViewController: UIViewController {
 
     @IBOutlet weak var bottomView: UIView!     // View was used instead of toolbar because it is more useful :]
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomViewContraits: NSLayoutConstraint!
     
     var thatsIam : Bool = true
   
@@ -34,14 +35,17 @@ class ChatViewController: UIViewController {
     
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                self.view.frame.origin.y -= keyboardSize.height
+            if self.bottomViewContraits.constant ==  0 {
+                self.bottomViewContraits.constant = keyboardSize.height
+            }
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += keyboardSize.height
+            if self.bottomViewContraits.constant != 0{
+                print(self.view.frame.origin.y)
+                self.bottomViewContraits.constant = 0
             }
         }
     }
