@@ -10,11 +10,13 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
-    @IBOutlet weak var textToolbar: UIToolbar!
+    @IBOutlet weak var bottomView: UIView!     // View was used instead of toolbar because it is more useful :]
     @IBOutlet weak var tableView: UITableView!
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 140
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.navigationController?.navigationBar.isTranslucent = false
@@ -41,7 +43,6 @@ class ChatViewController: UIViewController {
             }
         }
     }
-    
 }
 extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
     
