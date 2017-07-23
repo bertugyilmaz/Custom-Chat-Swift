@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGA-TH-F80" id="cen-Zz-k4E">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="x7x-vv-Wt5">
@@ -160,7 +160,7 @@
                                             <outlet property="senderMessageTextView" destination="Hxj-wS-Zs8" id="IjR-d2-esg"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="receiverCell" rowHeight="60" id="Nvm-si-QZO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="receiverCell" rowHeight="60" id="Nvm-si-QZO" customClass="ReceiverTableViewCell" customModule="Custom_Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nvm-si-QZO" id="jEN-4t-EfE">
@@ -174,9 +174,11 @@
                                                         <constraint firstAttribute="width" constant="30" id="n6U-Ql-KN3"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-z9-qBY">
-                                                    <rect key="frame" x="8" y="8" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-z9-qBY">
+                                                    <rect key="frame" x="8" y="8" width="26" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Zy5-aa-gY4"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -195,12 +197,19 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="C1G-jE-Dqr" secondAttribute="bottom" constant="8" id="0di-GJ-SLa"/>
                                                 <constraint firstItem="C1G-jE-Dqr" firstAttribute="top" secondItem="jEN-4t-EfE" secondAttribute="topMargin" constant="8" id="ABr-yo-CyQ"/>
+                                                <constraint firstItem="eMD-z9-qBY" firstAttribute="leading" secondItem="jEN-4t-EfE" secondAttribute="leadingMargin" id="B6S-vT-zP5"/>
+                                                <constraint firstItem="eMD-z9-qBY" firstAttribute="top" secondItem="jEN-4t-EfE" secondAttribute="topMargin" id="G5L-I5-Cbo"/>
                                                 <constraint firstItem="C1G-jE-Dqr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jEN-4t-EfE" secondAttribute="leadingMargin" constant="181" id="LTA-Ns-Jbs"/>
                                                 <constraint firstItem="PQE-p4-4XK" firstAttribute="bottom" secondItem="jEN-4t-EfE" secondAttribute="bottomMargin" id="NRK-T5-tgP"/>
                                                 <constraint firstItem="PQE-p4-4XK" firstAttribute="trailing" secondItem="jEN-4t-EfE" secondAttribute="trailingMargin" id="SuM-gf-zoH"/>
                                                 <constraint firstItem="PQE-p4-4XK" firstAttribute="leading" secondItem="C1G-jE-Dqr" secondAttribute="trailing" constant="8" symbolic="YES" id="k4B-bl-dP2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastTimeLabel" destination="eMD-z9-qBY" id="nDG-ql-aYS"/>
+                                            <outlet property="receiverImageView" destination="PQE-p4-4XK" id="f9s-o4-AaQ"/>
+                                            <outlet property="receiverMessageTextView" destination="C1G-jE-Dqr" id="3SP-DO-eM1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
