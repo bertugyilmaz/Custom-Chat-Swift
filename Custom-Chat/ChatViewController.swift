@@ -51,10 +51,17 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "senderCell") as! SenderTableViewCell
+        cell.senderImageView.layer.cornerRadius = 15
+        cell.senderMessageTextView.layer.cornerRadius = 10
         
-        return cell!
+        cell.senderImageView.image = UIImage(named: "user")
+        cell.senderMessageTextView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum eleifend dui ac tristique. Donec tincidunt luctus facilisis. Nulla libero eros, iaculis nec gravida quis, luctus a mauris. Morbi pharetra mauris eget cursus dapibus. Morbi rutrum facilisis metus, ac volutpat libero tristique ut. Phasellus egestas lectus nec massa blandit, nec tempus nunc fermentum. Nulla facilisi. Vestibulum pulvinar, mi id semper porttitor, metus lectus fringilla mauris, vel molestie nisl lectus eget arcu. Aenean eget nisl ultricies, mollis magna et, lobortis nisi. Donec in placerat elit, at laoreet justo. Donec pretium mauris sapien, bibendum feugiat erat sagittis quis. Ut magna neque, vulputate non iaculis a, efficitur et nunc."
+        cell.lastTimeLabel.text = "12.12.1212"
+        return cell
     }
+    
+    
 
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01393AB71F24D89D0037D32D /* SenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01393AB61F24D89D0037D32D /* SenderTableViewCell.swift */; };
 		0190ABEC1F1F6AE500185275 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABEB1F1F6AE500185275 /* MessagesTableViewController.swift */; };
 		0190ABEE1F1F6F6100185275 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */; };
 		0190ABFA1F1F826000185275 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABF91F1F826000185275 /* ChatViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01393AB61F24D89D0037D32D /* SenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderTableViewCell.swift; sourceTree = "<group>"; };
 		0190ABEB1F1F6AE500185275 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		0190ABF91F1F826000185275 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */,
+				01393AB61F24D89D0037D32D /* SenderTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				01F9B12D1F1F67B10028B568 /* AppDelegate.swift in Sources */,
 				0190ABEC1F1F6AE500185275 /* MessagesTableViewController.swift in Sources */,
 				0190ABFA1F1F826000185275 /* ChatViewController.swift in Sources */,
+				01393AB71F24D89D0037D32D /* SenderTableViewCell.swift in Sources */,
 				0190ABEE1F1F6F6100185275 /* MessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
