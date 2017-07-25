@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGA-TH-F80" id="cen-Zz-k4E">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="x7x-vv-Wt5">
@@ -220,7 +220,7 @@
                                         <rect key="frame" x="8" y="7" width="311" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyv-RU-1Td">
                                         <rect key="frame" x="330" y="7" width="36" height="30"/>
@@ -257,6 +257,7 @@
                     <connections>
                         <outlet property="bottomView" destination="I8A-5I-PRU" id="mYl-UQ-KAu"/>
                         <outlet property="bottomViewContraits" destination="mFr-JJ-HZZ" id="Qd5-PH-2U9"/>
+                        <outlet property="messageTextView" destination="wix-Ga-utL" id="odg-G5-Amr"/>
                         <outlet property="tableView" destination="YLb-nn-Eeu" id="laA-qv-CjL"/>
                     </connections>
                 </viewController>

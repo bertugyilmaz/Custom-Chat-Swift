@@ -13,6 +13,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!     // View was used instead of toolbar because it is more useful :]
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bottomViewContraits: NSLayoutConstraint!
+    @IBOutlet weak var messageTextView: UITextView!
     
     var thatsIam : Bool = true
   
@@ -28,24 +29,38 @@ class ChatViewController: UIViewController {
     }
     
     func keyboardSettings(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+       NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+       self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
     
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.bottomViewContraits.constant ==  0 {
-                self.bottomViewContraits.constant = keyboardSize.height
-            }
-        }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.bottomViewContraits.constant != 0{
-                print(self.view.frame.origin.y)
-                self.bottomViewContraits.constant = 0
+    //Keyboard Configure
+    
+    @objc func keyboardNotification(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+                if let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue{
+                    
+                    let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+                    let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue
+                    let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
+                    
+                    if (endFrame.origin.y) >= UIScreen.main.bounds.size.height {
+                        self.bottomViewContraits?.constant = 0.0
+                    } else {
+                        self.bottomViewContraits?.constant = endFrame.size.height
+                    }
+                    
+                    UIView.animate(withDuration: duration,
+                                   delay: TimeInterval(0),
+                                   options: animationCurve,
+                                   animations: { self.view.layoutIfNeeded() },
+                                   completion: nil)
+                }
             }
         }
     }
