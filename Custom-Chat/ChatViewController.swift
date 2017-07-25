@@ -29,10 +29,12 @@ class ChatViewController: UIViewController {
     }
     
     func keyboardSettings(){
-       NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-       self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        let swipeDown = UISwipeGestureRecognizer(target: self.view , action : #selector(UIView.endEditing(_:)))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
     }
-    
     
     deinit {
         NotificationCenter.default.removeObserver(self)

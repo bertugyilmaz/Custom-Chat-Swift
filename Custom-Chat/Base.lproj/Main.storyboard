@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGA-TH-F80" id="cen-Zz-k4E">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="x7x-vv-Wt5">
@@ -213,17 +213,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-5I-PRU">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-5I-PRU">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" bounces="NO" scrollEnabled="NO" text="Send Message" translatesAutoresizingMaskIntoConstraints="NO" id="wix-Ga-utL">
-                                        <rect key="frame" x="8" y="7" width="311" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" bounces="NO" scrollEnabled="NO" keyboardDismissMode="onDrag" text="Send Message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wix-Ga-utL">
+                                        <rect key="frame" x="8" y="7" width="290" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="290" id="Wxo-gC-FKm"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyv-RU-1Td">
-                                        <rect key="frame" x="330" y="7" width="36" height="30"/>
+                                        <rect key="frame" x="311" y="7" width="56" height="30"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" red="0.32937228680000002" green="0.32943451400000001" blue="0.32936835289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -231,32 +233,31 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="wix-Ga-utL" firstAttribute="centerY" secondItem="I8A-5I-PRU" secondAttribute="centerY" id="1V3-Ua-HWV"/>
-                                    <constraint firstItem="wix-Ga-utL" firstAttribute="top" secondItem="I8A-5I-PRU" secondAttribute="top" constant="7" id="8US-nW-Pa6"/>
-                                    <constraint firstItem="wix-Ga-utL" firstAttribute="leading" secondItem="I8A-5I-PRU" secondAttribute="leading" constant="8" id="9Qi-7a-S0x"/>
-                                    <constraint firstAttribute="trailing" secondItem="tyv-RU-1Td" secondAttribute="trailing" constant="9" id="EFo-kC-nfc"/>
-                                    <constraint firstItem="tyv-RU-1Td" firstAttribute="leading" secondItem="wix-Ga-utL" secondAttribute="trailing" constant="11" id="NFY-Nr-sRb"/>
-                                    <constraint firstAttribute="height" constant="44" id="qOE-pj-tc9"/>
-                                    <constraint firstItem="tyv-RU-1Td" firstAttribute="centerY" secondItem="wix-Ga-utL" secondAttribute="centerY" id="xKz-Cs-Ds5"/>
+                                    <constraint firstItem="wix-Ga-utL" firstAttribute="centerY" secondItem="I8A-5I-PRU" secondAttribute="centerY" id="7j0-Rh-cV5"/>
+                                    <constraint firstAttribute="trailing" secondItem="tyv-RU-1Td" secondAttribute="trailing" constant="8" id="B3C-vc-mz4"/>
+                                    <constraint firstAttribute="bottom" secondItem="wix-Ga-utL" secondAttribute="bottom" constant="7" id="IyY-5R-RR9"/>
+                                    <constraint firstItem="tyv-RU-1Td" firstAttribute="leading" secondItem="wix-Ga-utL" secondAttribute="trailing" constant="13" id="Vu1-sb-BA4"/>
+                                    <constraint firstItem="tyv-RU-1Td" firstAttribute="centerY" secondItem="wix-Ga-utL" secondAttribute="centerY" id="qxc-Ro-QXS"/>
+                                    <constraint firstItem="wix-Ga-utL" firstAttribute="leading" secondItem="I8A-5I-PRU" secondAttribute="leading" constant="8" id="tEP-Ux-FBO"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="I8A-5I-PRU" secondAttribute="trailing" id="2qm-bO-nie"/>
                             <constraint firstAttribute="trailing" secondItem="YLb-nn-Eeu" secondAttribute="trailing" id="8UB-Qi-rqr"/>
-                            <constraint firstItem="I8A-5I-PRU" firstAttribute="leading" secondItem="4rK-BN-I0o" secondAttribute="leading" id="ISl-0B-bDI"/>
-                            <constraint firstItem="I8A-5I-PRU" firstAttribute="top" secondItem="YLb-nn-Eeu" secondAttribute="bottom" id="IYp-s8-Z2i"/>
-                            <constraint firstAttribute="trailing" secondItem="I8A-5I-PRU" secondAttribute="trailing" id="Krs-mN-Hcr"/>
+                            <constraint firstItem="I8A-5I-PRU" firstAttribute="leading" secondItem="4rK-BN-I0o" secondAttribute="leading" id="gTU-MS-t8t"/>
+                            <constraint firstItem="alm-q2-brn" firstAttribute="top" secondItem="I8A-5I-PRU" secondAttribute="bottom" id="kJu-uE-OuK"/>
                             <constraint firstItem="YLb-nn-Eeu" firstAttribute="leading" secondItem="4rK-BN-I0o" secondAttribute="leading" id="lUL-UF-8iK"/>
                             <constraint firstItem="YLb-nn-Eeu" firstAttribute="top" secondItem="G3T-NN-byT" secondAttribute="bottom" id="lqQ-Mm-UIG"/>
-                            <constraint firstItem="alm-q2-brn" firstAttribute="top" secondItem="I8A-5I-PRU" secondAttribute="bottom" id="mFr-JJ-HZZ"/>
+                            <constraint firstItem="I8A-5I-PRU" firstAttribute="top" secondItem="YLb-nn-Eeu" secondAttribute="bottom" id="wku-TO-l21"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Name" id="neh-ys-uhy"/>
                     <connections>
                         <outlet property="bottomView" destination="I8A-5I-PRU" id="mYl-UQ-KAu"/>
-                        <outlet property="bottomViewContraits" destination="mFr-JJ-HZZ" id="Qd5-PH-2U9"/>
+                        <outlet property="bottomViewContraits" destination="kJu-uE-OuK" id="9cE-Ym-4Aw"/>
                         <outlet property="messageTextView" destination="wix-Ga-utL" id="odg-G5-Amr"/>
                         <outlet property="tableView" destination="YLb-nn-Eeu" id="laA-qv-CjL"/>
                     </connections>
