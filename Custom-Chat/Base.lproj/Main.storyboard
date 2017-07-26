@@ -116,12 +116,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Sender's Message" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxj-wS-Zs8">
-                                                    <rect key="frame" x="46" y="8" width="140" height="44"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Sender's Message" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxj-wS-Zs8">
+                                                    <rect key="frame" x="46" y="8" width="128.5" height="44"/>
                                                     <color key="backgroundColor" red="0.84624841370000004" green="0.84624841370000004" blue="0.84624841370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="140" id="SFn-To-UAl"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -144,14 +141,14 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="Hxj-wS-Zs8" firstAttribute="leading" secondItem="bQn-TN-lG7" secondAttribute="trailing" constant="8" symbolic="YES" id="HvZ-iW-5gb"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Hxj-wS-Zs8" secondAttribute="trailing" constant="80" id="Bqf-fW-143"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hxj-wS-Zs8" secondAttribute="bottom" id="Nzd-VU-nbE"/>
                                                 <constraint firstItem="mZY-o8-ujd" firstAttribute="trailing" secondItem="tF4-TV-OpD" secondAttribute="trailingMargin" id="Tlm-OT-Ic5"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Hxj-wS-Zs8" secondAttribute="trailing" constant="189" id="UFk-GS-Zya"/>
-                                                <constraint firstItem="Hxj-wS-Zs8" firstAttribute="top" secondItem="tF4-TV-OpD" secondAttribute="top" constant="8" id="Y1l-s3-XRJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="bQn-TN-lG7" secondAttribute="bottom" id="hLO-rT-fyG"/>
                                                 <constraint firstItem="mZY-o8-ujd" firstAttribute="top" secondItem="tF4-TV-OpD" secondAttribute="topMargin" id="irj-Ig-mRt"/>
-                                                <constraint firstAttribute="bottom" secondItem="Hxj-wS-Zs8" secondAttribute="bottom" constant="8" id="nlb-67-Vau"/>
                                                 <constraint firstItem="bQn-TN-lG7" firstAttribute="leading" secondItem="tF4-TV-OpD" secondAttribute="leading" constant="8" id="qyA-TR-X3C"/>
+                                                <constraint firstItem="Hxj-wS-Zs8" firstAttribute="centerY" secondItem="tF4-TV-OpD" secondAttribute="centerY" id="xGm-a9-HAw"/>
+                                                <constraint firstItem="Hxj-wS-Zs8" firstAttribute="leading" secondItem="bQn-TN-lG7" secondAttribute="trailing" constant="8" id="zx7-m5-zJP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -183,26 +180,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Reciever Message" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1G-jE-Dqr">
-                                                    <rect key="frame" x="189" y="16" width="140" height="28"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Reciever Message" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1G-jE-Dqr">
+                                                    <rect key="frame" x="201.5" y="8" width="127.5" height="44"/>
                                                     <color key="backgroundColor" red="0.9884004663" green="0.45148909739999998" blue="0.26938919319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="140" id="B3A-Qz-KUQ"/>
-                                                    </constraints>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="C1G-jE-Dqr" secondAttribute="bottom" constant="8" id="0di-GJ-SLa"/>
-                                                <constraint firstItem="C1G-jE-Dqr" firstAttribute="top" secondItem="jEN-4t-EfE" secondAttribute="topMargin" constant="8" id="ABr-yo-CyQ"/>
+                                                <constraint firstItem="C1G-jE-Dqr" firstAttribute="centerY" secondItem="jEN-4t-EfE" secondAttribute="centerY" id="3YA-Nk-72v"/>
                                                 <constraint firstItem="eMD-z9-qBY" firstAttribute="leading" secondItem="jEN-4t-EfE" secondAttribute="leadingMargin" id="B6S-vT-zP5"/>
                                                 <constraint firstItem="eMD-z9-qBY" firstAttribute="top" secondItem="jEN-4t-EfE" secondAttribute="topMargin" id="G5L-I5-Cbo"/>
-                                                <constraint firstItem="C1G-jE-Dqr" firstAttribute="leading" relation="lessThanOrEqual" secondItem="jEN-4t-EfE" secondAttribute="leadingMargin" constant="181" id="LTA-Ns-Jbs"/>
                                                 <constraint firstItem="PQE-p4-4XK" firstAttribute="bottom" secondItem="jEN-4t-EfE" secondAttribute="bottomMargin" id="NRK-T5-tgP"/>
+                                                <constraint firstItem="C1G-jE-Dqr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jEN-4t-EfE" secondAttribute="leadingMargin" constant="80" id="STv-BV-uTP"/>
                                                 <constraint firstItem="PQE-p4-4XK" firstAttribute="trailing" secondItem="jEN-4t-EfE" secondAttribute="trailingMargin" id="SuM-gf-zoH"/>
-                                                <constraint firstItem="PQE-p4-4XK" firstAttribute="leading" secondItem="C1G-jE-Dqr" secondAttribute="trailing" constant="8" symbolic="YES" id="k4B-bl-dP2"/>
+                                                <constraint firstItem="PQE-p4-4XK" firstAttribute="leading" secondItem="C1G-jE-Dqr" secondAttribute="trailing" constant="8" id="oj0-cw-91Z"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="C1G-jE-Dqr" secondAttribute="bottom" id="ybT-vm-Vdt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
