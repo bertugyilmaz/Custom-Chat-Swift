@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01393AB71F24D89D0037D32D /* SenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01393AB61F24D89D0037D32D /* SenderTableViewCell.swift */; };
 		01393AB91F24E3EB0037D32D /* ReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01393AB81F24E3EB0037D32D /* ReceiverTableViewCell.swift */; };
+		018280111F29C2CD00A16879 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018280101F29C2CD00A16879 /* Message.swift */; };
 		0190ABEC1F1F6AE500185275 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABEB1F1F6AE500185275 /* MessagesTableViewController.swift */; };
 		0190ABEE1F1F6F6100185275 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */; };
 		0190ABFA1F1F826000185275 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190ABF91F1F826000185275 /* ChatViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		01393AB61F24D89D0037D32D /* SenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderTableViewCell.swift; sourceTree = "<group>"; };
 		01393AB81F24E3EB0037D32D /* ReceiverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverTableViewCell.swift; sourceTree = "<group>"; };
+		018280101F29C2CD00A16879 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0190ABEB1F1F6AE500185275 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		0190ABED1F1F6F6100185275 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		0190ABF91F1F826000185275 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		0190ABF01F1F78D900185275 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				018280101F29C2CD00A16879 /* Message.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				01393AB71F24D89D0037D32D /* SenderTableViewCell.swift in Sources */,
 				01393AB91F24E3EB0037D32D /* ReceiverTableViewCell.swift in Sources */,
 				0190ABEE1F1F6F6100185275 /* MessageTableViewCell.swift in Sources */,
+				018280111F29C2CD00A16879 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +326,7 @@
 				DEVELOPMENT_TEAM = 37V52RJ6S5;
 				INFOPLIST_FILE = "Custom-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chats";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -337,7 +341,7 @@
 				DEVELOPMENT_TEAM = 37V52RJ6S5;
 				INFOPLIST_FILE = "Custom-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chats";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bertugyilmaz.Custom-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

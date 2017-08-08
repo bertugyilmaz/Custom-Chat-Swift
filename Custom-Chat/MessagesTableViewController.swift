@@ -10,8 +10,10 @@ import UIKit
 
 class MessagesTableViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.tableFooterView = UIView() // Clear footer
     }
 
     override func didReceiveMemoryWarning() {

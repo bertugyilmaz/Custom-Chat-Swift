@@ -19,14 +19,13 @@ class ChatViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 140
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         self.navigationController?.navigationBar.isTranslucent = false
-        
+        self.textViewSettings()
+        self.tableViewSettings()
         self.keyboardSettings()
     }
+    
+    //Settings
     
     func keyboardSettings(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
@@ -34,6 +33,19 @@ class ChatViewController: UIViewController {
         let swipeDown = UISwipeGestureRecognizer(target: self.view , action : #selector(UIView.endEditing(_:)))
         swipeDown.direction = .down
         self.view.addGestureRecognizer(swipeDown)
+    }
+    
+    func textViewSettings (){
+        self.messageTextView.layer.borderWidth = CGFloat(0.5)
+        self.messageTextView.layer.borderColor = UIColor.darkGray.cgColor
+        self.messageTextView.layer.cornerRadius = CGFloat(13)
+    }
+    
+    func tableViewSettings(){
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 140
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     deinit {
@@ -81,7 +93,7 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "receiverCell", for: indexPath) as! ReceiverTableViewCell
             
             cell.receiverImageView.layer.cornerRadius = 15
-            cell.receiverMessageTextView.layer.cornerRadius = 10
+            cell.receiverMessageTextView.layer.cornerRadius = 8
             
             cell.receiverImageView.image = UIImage(named: "user")
             cell.receiverMessageTextView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum eleifend dui ac tristique. Donec tincidunt luctus facilisis. Nulla libero eros, iaculis nec gravida quis, luctus a mauris. Morbi pharetra mauris eget cursus dapibus. Morbi rutrum facilisis metus, ac volutpat libero tristique ut. Phasellus egestas lectus nec massa blandit, nec tempus nunc fermentum. Nulla facilisi. Vestibulum pulvinar, mi id semper porttitor, metus lectus fringilla mauris, vel molestie nisl lectus eget arcu. Aenean eget nisl ultricies, mollis magna et, lobortis nisi. Donec in placerat elit, at laoreet justo. Donec pretium mauris sapien, bibendum feugiat erat sagittis quis. Ut magna neque, vulputate non iaculis a, efficitur et nunc."
@@ -91,13 +103,14 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "senderCell") as! SenderTableViewCell
             cell.senderImageView.layer.cornerRadius = 15
-            cell.senderMessageTextView.layer.cornerRadius = 10
+            cell.senderMessageTextView.layer.cornerRadius = 8
             
             cell.senderImageView.image = UIImage(named: "user")
-            cell.senderMessageTextView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum eleifend dui ac tristique. Donec tincidunt luctus facilisis. Nulla libero eros, iaculis nec gravida quis, luctus a mauris. Morbi pharetra mauris eget cursus dapibus. Morbi rutrum facilisis metus, ac volutpat libero tristique ut. Phasellus egestas lectus nec massa blandit, nec tempus nunc fermentum. Nulla facilisi. Vestibulum pulvinar, mi id semper porttitor, metus lectus fringilla mauris, vel molestie nisl lectus eget arcu. Aenean eget nisl ultricies, mollis magna et, lobortis nisi. Donec in placerat elit, at laoreet justo. Donec pretium mauris sapien, bibendum feugiat erat sagittis quis. Ut magna neque, vulputate non iaculis a, efficitur et nunc."
+            cell.senderMessageTextView.text = "s" //"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum eleifend dui ac tristique. Donec tincidunt luctus facilisis. Nulla libero eros, iaculis nec gravida quis, luctus a mauris. Morbi pharetra mauris eget cursus dapibus. Morbi rutrum facilisis metus, ac volutpat libero tristique ut. Phasellus egestas lectus nec massa blandit, nec tempus nunc fermentum. Nulla facilisi. Vestibulum pulvinar, mi id semper porttitor, metus lectus fringilla mauris, vel molestie nisl lectus eget arcu. Aenean eget nisl ultricies, mollis magna et, lobortis nisi. Donec in placerat elit, at laoreet justo. Donec pretium mauris sapien, bibendum feugiat erat sagittis quis. Ut magna neque, vulputate non iaculis a, efficitur et nunc."
             cell.lastTimeLabel.text = "12.12.1212"
             return cell
         }
     }
+    
 }
 
